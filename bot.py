@@ -32,9 +32,22 @@ groq_api_key = os.getenv('GROQ_API_KEY')
 if not groq_api_key:
     raise ValueError("GROQ_API_KEY not found in environment variables")
 
+model_options = [
+    "Deepseek-R1-Distill-Llama-70b", 
+    "Gemma2-9b-It", 
+    "Llama-3.3-70b-Specdec", 
+    "Llama-3.3-70b-Versatile", 
+    "Llama-3.2-3b-Preview", 
+    "Llama-3.2-1b-Preview", 
+    "Llama-3.1-8b-Instant", 
+    "Mixtral-8x7b-32768"
+]
+
+selected_model = st.selectbox("Select Model:", model_options)
+
 llm = ChatGroq(
     api_key=groq_api_key,  
-    model_name='deepseek-r1-distill-llama-70b'  
+    model_name=selected_model  
 )
 
 prompt = ChatPromptTemplate.from_template("""
