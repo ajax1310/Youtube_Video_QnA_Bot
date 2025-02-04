@@ -18,7 +18,7 @@ This project is a YouTube Video QA System that allows users to extract and analy
 - **SpeechRecognition** (for audio transcription)
 - **Pydub** (for audio processing)
 - **yt-dlp** (for YouTube audio extraction)
-- **OpenAI API / Groq API** (for LLM responses)
+- **Groq API** (for LLM responses)
 
 ## Installation
 
