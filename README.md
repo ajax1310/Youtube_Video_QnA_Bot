@@ -25,12 +25,12 @@ This project is a YouTube Video QA System that allows users to extract and analy
 1. Clone the repository:
     ```bash
     git clone https://github.com/ajax1310/Youtube_Video_QnA_Bot.git
-    cd youtube-qa-system
+
     ```
 
 2. Create a virtual environment:
     ```bash
-    conda create -m venv venv
+    conda create -n venv python=3.10
     conda activate venv
     ```
 
