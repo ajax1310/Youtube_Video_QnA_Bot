@@ -48,7 +48,7 @@ This project is a YouTube Video QnA Chatbot that allows users to extract and ana
 
 1. Run the Streamlit application:
     ```bash
-    streamlit run bot.py
+    streamlit run main.py
     ```
 
 2. Enter a YouTube video URL and click **Download and Transcribe**.
