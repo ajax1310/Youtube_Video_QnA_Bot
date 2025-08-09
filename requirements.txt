@@ -5,3 +5,5 @@ yt-dlp
 tiktoken
 docarray
 SpeechRecognition
+pydub
+langgraph
