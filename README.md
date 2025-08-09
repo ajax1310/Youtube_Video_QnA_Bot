@@ -1,12 +1,11 @@
-# YouTube Video QA System
+# YouTube Video QnA Chatbot
 
 ## Overview
-This project is a YouTube Video QA System that allows users to extract and analyze content from YouTube videos. The system downloads audio from a given YouTube video, transcribes it, generates vector embeddings, and enables users to query the extracted content using a selected LLM.
+This project is a YouTube Video QnA Chatbot that allows users to extract and analyze content from YouTube videos. The system downloads audio from a given YouTube video, transcribes it, stores it in the context, and enables users to query the extracted content using a selected LLM.
 
 ## Features
 - **Download Audio**: Extracts audio from a YouTube video.
 - **Transcription**: Uses Google Speech Recognition to transcribe audio in chunks.
-- **Text Embeddings**: Creates vector embeddings using FAISS and Ollama Embeddings.
 - **Question Answering**: Allows users to query transcribed content using AI models.
 - **Model Selection**: Provides multiple LLMs options for answering questions.
 
@@ -14,7 +13,7 @@ This project is a YouTube Video QA System that allows users to extract and analy
 - **Python**
 - **Streamlit** (for UI)
 - **LangChain** (for text processing & retrieval)
-- **FAISS** (for vector search)
+- **Langgraph** (for the workflow)
 - **SpeechRecognition** (for audio transcription)
 - **Pydub** (for audio processing)
 - **yt-dlp** (for YouTube audio extraction)
@@ -53,12 +52,13 @@ This project is a YouTube Video QA System that allows users to extract and analy
     ```
 
 2. Enter a YouTube video URL and click **Download and Transcribe**.
-3. Once transcribed, click **Create Document Embeddings**.
 4. Enter a query to retrieve relevant information from the transcribed text.
 
 ## File Structure
 ```
-├── bot.py               # Main app alongwith Streamlit     
+├── bot.py
+├── main.py              # Main app alongwith Streamlit
+├── workflow.py          # Contains the langgraph workflow
 ├── requirements.txt     # Dependencies
 ├── .env                 # Environment variables
 ├── files/
